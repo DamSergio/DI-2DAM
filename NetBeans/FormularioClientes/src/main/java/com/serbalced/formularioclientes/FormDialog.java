@@ -6,6 +6,7 @@ package com.serbalced.formularioclientes;
 
 import dto.User;
 import java.util.Date;
+import logic.UserLogic;
 
 /**
  *
@@ -149,7 +150,8 @@ public class FormDialog extends javax.swing.JDialog {
         String loc = cbLoc.getSelectedItem().toString();
         
         User user = new User(name, firtsName, date, loc);
-        mainFrame.insertRow(user);
+        //mainFrame.insertRow(user);
+        UserLogic.newUser(user);
         this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 

@@ -2,12 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.serbalced.formularioclientes;
+package com.serbalced.pruebatabla;
 
-import dto.User;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
-import logic.UserLogic;
+import logic.AlumnoLogic;
 
 /**
  *
@@ -17,9 +16,12 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
+    
+    private AlumnoLogic logica = new AlumnoLogic();
+    
     public MainFrame() {
         initComponents();
-        initTable();
+        tbUsers.setModel(new AlumnoTableModel(logica.getAlumnos()));
     }
 
     /**
@@ -38,9 +40,6 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbUsers = new javax.swing.JTable();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenuUsers = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -82,28 +81,9 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        jMenuBar2.setBackground(new java.awt.Color(255, 255, 255));
-        jMenuBar2.setForeground(new java.awt.Color(0, 0, 0));
-
-        jMenuUsers.setText("Usuarios");
-
-        jMenuItem1.setBackground(new java.awt.Color(255, 255, 255));
-        jMenuItem1.setForeground(new java.awt.Color(0, 0, 0));
-        jMenuItem1.setText("Registro");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenuUsers.add(jMenuItem1);
-
-        jMenuBar2.add(jMenuUsers);
-
-        setJMenuBar(jMenuBar2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,13 +98,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-        FormDialog form = new FormDialog(this, true);
-        form.setVisible(true);
-        initTable();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,6 +125,7 @@ public class MainFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -165,26 +139,13 @@ public class MainFrame extends javax.swing.JFrame {
         DefaultTableModel dtm = new DefaultTableModel();
         String header[] = {"name", "firts name", "date", "loc"};
         dtm.setColumnIdentifiers(header);
-        
-        for (User user : UserLogic.getUsers()){
-            dtm.addRow(user.toArrayString());
-        }
-        
         tbUsers.setModel(dtm);
-    }
-    
-    public void insertRow(User user){
-//        DefaultTableModel dtm = (DefaultTableModel) tbUsers.getModel();
-//        dtm.addRow(user.toArrayString());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenu jMenuUsers;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
