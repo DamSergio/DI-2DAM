@@ -89,7 +89,13 @@ public class LayoutPrueba extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        JOptionPane.showConfirmDialog(this, "Quieres jugar a un juego?", "JUJUJUJU", JOptionPane.WARNING_MESSAGE);
+        int opcion = JOptionPane.showConfirmDialog(this, "Quieres jugar a un juego?", "JUJUJUJU", JOptionPane.WARNING_MESSAGE);
+        
+        if (opcion == JOptionPane.YES_OPTION){
+            JOptionPane.showMessageDialog(this, "JUGAMOS");
+        } else {
+            JOptionPane.showMessageDialog(this, "Cerdo");
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -97,7 +103,8 @@ public class LayoutPrueba extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        JOptionPane.showInputDialog(this, "Dime tu nombre", "nombre", JOptionPane.QUESTION_MESSAGE);
+        String input = JOptionPane.showInputDialog(this, "Dime tu nombre", "nombre", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(this, input);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
