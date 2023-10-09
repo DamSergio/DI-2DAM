@@ -5,11 +5,14 @@
 package com.serbalced.ejerciciopractico1unidad1;
 
 import dto.User;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import logic.UserLogic;
 import org.netbeans.validation.api.builtin.stringvalidation.StringValidators;
 import org.netbeans.validation.api.ui.ValidationGroup;
+import org.openide.util.Exceptions;
 
 /**
  *
@@ -192,6 +195,16 @@ public class FormFrame extends javax.swing.JDialog {
         
         User u = new User(name, fn, age, loc);
         UserLogic.addUser(u);
+        
+        try {
+            FileWriter writer = new FileWriter("users.txt", true);
+            writer.write(name + "," + fn + "," + age + "," + loc);
+            writer.write(System.getProperty("line.separator"));
+            writer.close();
+        } catch (IOException ex) {
+            Exceptions.printStackTrace(ex);
+        }
+        
         this.dispose();
     }//GEN-LAST:event_btnAcceptActionPerformed
 

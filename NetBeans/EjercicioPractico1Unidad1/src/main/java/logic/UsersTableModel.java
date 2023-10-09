@@ -14,7 +14,7 @@ import dto.User;
  */
 public class UsersTableModel extends AbstractTableModel{
     private List<User> users;
-    private String[] columnas = {"nombre", "apellido", "edad", "loclidad"};
+    private String[] columnas = {"nombre", "apellido", "edad", "localidad"};
 
     public UsersTableModel(List<User> users) {
         this.users = users;
