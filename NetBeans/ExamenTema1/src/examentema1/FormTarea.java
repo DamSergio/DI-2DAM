@@ -6,6 +6,12 @@ package examentema1;
 
 import dto.Tarea;
 import Logic.TareaLogic;
+import com.mysql.cj.jdbc.result.ResultSetFactory;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.ParseException;
 import java.util.Date;
 import java.text.SimpleDateFormat;  
@@ -171,22 +177,21 @@ public class FormTarea extends javax.swing.JDialog {
             Date fechaIni = (Date) spDateStart.getValue();
             Date fechaFin = (Date) spDateEnd.getValue();
             
-            Tarea t = new Tarea(name, desc, asig, fechaIni, fechaFin);
-            TareaLogic.addTarea(t);
-            String nombre = "";
-            Date date;
             try {
-                date = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse("30/12/9999");
-                for (Tarea l : TareaLogic.getLista()){
-                    int res = l.getFechaFin().compareTo(date);
-                    if (res < 0){
-                        date = l.getFechaFin();
-                        nombre = l.getNombre();
-                    }
-                }
-
-                mainframe.lbTarea.setText("Tarea: " + nombre + " " + date);
-            } catch (ParseException ex) {
+                SimpleDateFormat basic = new SimpleDateFormat("yyyy-MM-dd");
+                
+                String fi = basic.format(fechaIni);
+                String ff = basic.format(fechaFin);
+                
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/clase", "root", "1234");
+                conn.setAutoCommit(true);
+                
+                Statement st = conn.createStatement();
+                st.executeUpdate("INSERT INTO tareas (nombre, descripcion, asignatura, fecha_inicio, fecha_fin) VALUES('" + name + "', '" + desc + "', '" + asig + "', '" + fi + "', '" + ff + "')");
+            } catch (ClassNotFoundException ex) {
+                Exceptions.printStackTrace(ex);
+            } catch (SQLException ex) {
                 Exceptions.printStackTrace(ex);
             }
             

@@ -16,6 +16,9 @@ import javax.swing.RowSorter;
 import javax.swing.SortOrder;
 import javax.swing.table.TableRowSorter;
 import dto.Tarea;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,6 +26,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.openide.util.Exceptions;
+import java.sql.*;
 
 /**
  *
@@ -130,15 +134,12 @@ public class ExamenTema1 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(307, 307, 307))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,7 +167,21 @@ public class ExamenTema1 extends javax.swing.JFrame {
         int response = JOptionPane.showConfirmDialog(this, "Desea borrar esa tarea?", "Borrar tarea", JOptionPane.INFORMATION_MESSAGE);
         if (response == JOptionPane.YES_OPTION){
             int row = tbTareas.getSelectedRow();
-            TareaLogic.getLista().remove(row);
+            
+            int id = (int) tbTareas.getModel().getValueAt(row, 0);
+            
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/clase", "root", "1234");
+            
+                Statement st = conn.createStatement();
+                st.executeUpdate("DELETE FROM tareas WHERE id = " + id);
+            } catch (ClassNotFoundException ex) {
+                Exceptions.printStackTrace(ex);
+            } catch (SQLException ex) {
+                Exceptions.printStackTrace(ex);
+            }
+            
             initTable();
         }
     }//GEN-LAST:event_btnDelActionPerformed
@@ -236,12 +251,37 @@ public class ExamenTema1 extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void initTable() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/clase", "root", "1234");
+            
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM tareas");
+            
+            ArrayList<Tarea> lista = new ArrayList<>();
+            
+            while(rs.next()){
+                //Date fi = new SimpleDateFormat("yyyy/MM/dd").parse(rs.getString(4));
+                Tarea t = new Tarea(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5), rs.getDate(6));
+                lista.add(t);
+            }
+            TareaLogic.setLista(lista);
+            
+            rs = st.executeQuery("SELECT nombre, MIN(fecha_fin) AS \"min\" FROM tareas GROUP BY nombre, fecha_fin");
+            rs.next();
+            lbTarea.setText("Tarea: " + rs.getString(1) + " " + rs.getString(2));
+        } catch (ClassNotFoundException ex) {
+            Exceptions.printStackTrace(ex);
+        } catch (SQLException ex) {
+            Exceptions.printStackTrace(ex);
+        }
+        
         sorter = new TableRowSorter<>(new TareaTableModel(TareaLogic.getLista()));
         tbTareas.setModel(new TareaTableModel(TareaLogic.getLista()));
         tbTareas.setRowSorter(sorter);
         
         List<RowSorter.SortKey> sortKeys = new ArrayList<>();
-        sortKeys.add(new RowSorter.SortKey(0, SortOrder.DESCENDING));
+        sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING));
         sorter.setSortKeys(sortKeys);
     }
 }

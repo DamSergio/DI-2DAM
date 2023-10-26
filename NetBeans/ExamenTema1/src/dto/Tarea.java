@@ -11,18 +11,24 @@ import java.util.Date;
  * @author Sergio
  */
 public class Tarea {
+       private int id;
        private String nombre;
        private String desc;
        private String asig;
        private Date fechaIni;
        private Date fechaFin;
 
-    public Tarea(String nombre, String desc, String asig, Date fechaIni, Date fechaFin) {
+    public Tarea(int id, String nombre, String desc, String asig, Date fechaIni, Date fechaFin) {
+        this.id = id;
         this.nombre = nombre;
         this.desc = desc;
         this.asig = asig;
         this.fechaIni = fechaIni;
         this.fechaFin = fechaFin;
+    }
+    
+    public int getId(){
+        return id;
     }
 
     public String getNombre() {

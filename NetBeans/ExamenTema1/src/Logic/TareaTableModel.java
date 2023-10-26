@@ -14,7 +14,7 @@ import javax.swing.table.AbstractTableModel;
  */
 public class TareaTableModel extends AbstractTableModel{
     private ArrayList<Tarea> tareas;
-    private String[] columnas = {"nombre", "desc", "asignatura", "fecha_inicio", "fecha_fin"};
+    private String[] columnas = {"id", "nombre", "desc", "asignatura", "fecha_inicio", "fecha_fin"};
     
     public TareaTableModel(ArrayList<Tarea> t) {
         this.tareas = t;
@@ -34,14 +34,16 @@ public class TareaTableModel extends AbstractTableModel{
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex){
             case 0:
-                return this.tareas.get(rowIndex).getNombre();
+                return this.tareas.get(rowIndex).getId();
             case 1:
-                return this.tareas.get(rowIndex).getDesc();
+                return this.tareas.get(rowIndex).getNombre();
             case 2:
-                return this.tareas.get(rowIndex).getAsig();
+                return this.tareas.get(rowIndex).getDesc();
             case 3:
-                return this.tareas.get(rowIndex).getFechaIni();
+                return this.tareas.get(rowIndex).getAsig();
             case 4:
+                return this.tareas.get(rowIndex).getFechaIni();
+            case 5:
                 return this.tareas.get(rowIndex).getFechaFin();
         }
         return null;

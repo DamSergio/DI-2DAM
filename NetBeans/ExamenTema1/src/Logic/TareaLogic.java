@@ -20,5 +20,9 @@ public class TareaLogic {
     
     public static ArrayList<Tarea> getLista(){
         return listaTareas;
-    } 
+    }
+    
+    public static void setLista(ArrayList<Tarea> l){
+        listaTareas = l;
+    }
 }
