@@ -195,8 +195,8 @@ public class Bomba extends javax.swing.JFrame implements PropertyChangeListener{
         // TODO add your handling code here:
         int userCode = (int) spCode.getValue();
         if (userCode == code){
-            JOptionPane.showMessageDialog(this, "HAS GANADO", "GANASTES", JOptionPane.INFORMATION_MESSAGE);
             cd.cancel(true);
+            JOptionPane.showMessageDialog(this, "HAS GANADO", "GANASTES", JOptionPane.INFORMATION_MESSAGE);
         }
         
         if (userCode > code){
