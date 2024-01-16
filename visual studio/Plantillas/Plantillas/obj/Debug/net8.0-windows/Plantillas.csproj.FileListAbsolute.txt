@@ -1,0 +1,41 @@
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.exe
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.deps.json
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.runtimeconfig.json
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.dll
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.pdb
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas_MarkupCompile.cache
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas_MarkupCompile.lref
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.g.resources
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.AssemblyInfoInputs.cache
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.AssemblyInfo.cs
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.csproj.CoreCompileInputs.cache
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.dll
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\refint\Plantillas.dll
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.pdb
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.genruntimeconfig.cache
+C:\Users\Trabajo\source\repos\Plantillas\Plantillas\obj\Debug\net8.0-windows\ref\Plantillas.dll
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.exe
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.deps.json
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.runtimeconfig.json
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.dll
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\bin\Debug\net8.0-windows\Plantillas.pdb
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas_MarkupCompile.cache
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas_MarkupCompile.lref
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.g.resources
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.AssemblyInfoInputs.cache
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.AssemblyInfo.cs
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.sourcelink.json
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.dll
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\refint\Plantillas.dll
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.pdb
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\Plantillas.genruntimeconfig.cache
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Plantillas\Plantillas\obj\Debug\net8.0-windows\ref\Plantillas.dll

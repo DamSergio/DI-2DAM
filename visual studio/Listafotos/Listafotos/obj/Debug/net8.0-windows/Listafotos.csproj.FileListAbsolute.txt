@@ -1,0 +1,43 @@
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.exe
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.deps.json
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.runtimeconfig.json
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.dll
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.pdb
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos_MarkupCompile.cache
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos_MarkupCompile.lref
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.g.resources
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.AssemblyInfoInputs.cache
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.AssemblyInfo.cs
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.csproj.CoreCompileInputs.cache
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.dll
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\refint\Listafotos.dll
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.pdb
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.genruntimeconfig.cache
+C:\Users\Trabajo\source\repos\Listafotos\Listafotos\obj\Debug\net8.0-windows\ref\Listafotos.dll
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.exe
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.deps.json
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.runtimeconfig.json
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.dll
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\bin\Debug\net8.0-windows\Listafotos.pdb
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos_MarkupCompile.cache
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos_MarkupCompile.lref
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.g.resources
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.AssemblyInfoInputs.cache
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.AssemblyInfo.cs
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.sourcelink.json
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.dll
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\refint\Listafotos.dll
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.pdb
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\Listafotos.genruntimeconfig.cache
+C:\Users\Sergio\Desktop\DI-2DAM\visual studio\Listafotos\Listafotos\obj\Debug\net8.0-windows\ref\Listafotos.dll

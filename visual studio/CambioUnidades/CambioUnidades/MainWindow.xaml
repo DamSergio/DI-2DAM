@@ -1,0 +1,17 @@
+﻿<Window x:Class="CambioUnidades.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CambioUnidades"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="cbUniBef" ItemsSource="{Binding Path=unidades}" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" Width="166" Height="51" SelectedIndex="0"/>
+        <ComboBox x:Name="cbUniAft" ItemsSource="{Binding Path=unidades}" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="166" Height="51" SelectedIndex="0"/>
+        <Label x:Name="lbRes" Content="Label" HorizontalAlignment="Center" Margin="0,354,0,0" VerticalAlignment="Top" Height="55" Width="166" FontSize="36"/>
+        <TextBox x:Name="txtUni" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="166" Height="58" TextAlignment="Center" FontSize="24"/>
+        <Button x:Name="btnConv" Content="Convertir" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Height="37" Width="166" Click="btnConv_Click"/>
+
+    </Grid>
+</Window>

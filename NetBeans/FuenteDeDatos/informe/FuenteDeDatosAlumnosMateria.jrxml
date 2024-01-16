@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FuenteDeDatosAlumnosMateria" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a103bb7-d65a-4eed-809e-cd3632209bf4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="clave" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="materiasDS" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="167" y="25" width="275" height="54" uuid="3adea628-e6e5-489f-b919-4ce16307011b"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTA DE ALUMNOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14"/>
+	</pageHeader>
+	<detail>
+		<band height="103" splitType="Stretch">
+			<textField>
+				<reportElement x="98" y="0" width="179" height="20" uuid="eebcc2a1-760c-4863-90de-41546b0174e2"/>
+				<textFieldExpression><![CDATA[$F{clave}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="0" width="176" height="20" uuid="d436f5f1-175a-4ee7-b6bd-cdeeb588c88e"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="0" y="20" width="554" height="83" uuid="ac0c5aae-33c1-49be-95ec-fe9c46efc14e"/>
+				<dataSourceExpression><![CDATA[$F{materiasDS}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["FuenteDeDatosAlumnosMateria_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="0" y="0" width="277" height="20" uuid="ff1e3c53-4984-4ff6-9072-a0c61edb3018"/>
+				<text><![CDATA[clave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="277" height="20" uuid="65da682e-fc6d-4b1d-afc0-00b027e7c22d"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculadora"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Label x:Name="lbSol" HorizontalContentAlignment="Center" Content="Solucion" HorizontalAlignment="Center" Margin="0,318,0,0" VerticalAlignment="Top" Height="42" FontSize="24"/>
+        <TextBox x:Name="txt1" HorizontalAlignment="Left" Margin="46,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" Height="53" TextAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="txt2" HorizontalAlignment="Left" Margin="615,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" Height="53" TextAlignment="Center" FontSize="24"/>
+        <Button x:Name="btnSuma" Content="Suma" HorizontalAlignment="Left" Margin="46,178,0,0" VerticalAlignment="Top" Height="39" Width="149" FontSize="24" Click="btnSuma_Click"/>
+        <Button x:Name="btnResta" Content="Resta" HorizontalAlignment="Left" Margin="251,178,0,0" VerticalAlignment="Top" Height="39" Width="149" FontSize="24" Click="btnResta_Click"/>
+        <Button x:Name="btnDiv" Content="Div" HorizontalAlignment="Left" Margin="593,178,0,0" VerticalAlignment="Top" Height="39" Width="149" FontSize="24" Click="btnDiv_Click"/>
+        <Button x:Name="btnMult" Content="Mult" HorizontalAlignment="Left" Margin="405,178,0,0" VerticalAlignment="Top" Height="39" Width="149" FontSize="24" Click="btnMult_Click"/>
+
+    </Grid>
+</Window>

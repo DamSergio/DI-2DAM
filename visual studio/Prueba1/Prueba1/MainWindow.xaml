@@ -1,0 +1,19 @@
+﻿<Window x:Class="Prueba1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prueba1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="lbText" Content="Hola Mundo" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="224" FontFamily="Consolas" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="btnMostrar" Content="Pulsame Hola" HorizontalAlignment="Center" Margin="0,67,0,0" VerticalAlignment="Top" Height="63" Width="224" FontFamily="Consolas" FontSize="24" Click="btnMostrar_Click"/>
+        <ComboBox x:Name="cbPersonas" ItemsSource="{Binding Path=personaList}" HorizontalAlignment="Center" Margin="0,148,0,0" VerticalAlignment="Top" Width="224" SelectionChanged="cbPersonas_SelectionChanged"/>
+        <Rectangle HorizontalAlignment="Left" Height="101" Margin="212,179,0,0" Stroke="Black" VerticalAlignment="Top" Width="330"/>
+        <Label x:Name="lbName" Content="Nombre" HorizontalAlignment="Left" Margin="265,217,0,0" VerticalAlignment="Top" Width="112"/>
+        <Label x:Name="lbApe" Content="Apellidos" HorizontalAlignment="Left" Margin="400,217,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.527,0.451"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="388,364,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Window>

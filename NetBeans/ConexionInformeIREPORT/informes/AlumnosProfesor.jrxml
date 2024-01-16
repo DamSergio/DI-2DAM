@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AlumnosProfesor" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="36448d90-0454-4d9b-98c2-1d63b7414447">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="profesor_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Sergio\\Desktop\\DI-2DAM\\ireport\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select e.nombre as alumno_nombre, e.edad as alumno_edad, e.grado as alumno_grado
+from Estudiantes e
+where profesor_id = $P{profesor_id}]]>
+	</queryString>
+	<field name="alumno_nombre" class="java.lang.String"/>
+	<field name="alumno_edad" class="java.lang.Integer"/>
+	<field name="alumno_grado" class="java.lang.String"/>
+	<variable name="sum_alumnos" class="java.lang.Number" calculation="Count">
+		<variableExpression><![CDATA[$V{REPORT_COUNT}]]></variableExpression>
+	</variable>
+	<variable name="alumno_nombre_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{alumno_nombre}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="157" y="0" width="213" height="58" uuid="4671fd48-7b51-4059-8e95-bcdc6115861d"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNOS DE PROFESOR:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="69" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="69" uuid="2fcdab13-40db-4124-8f36-ee4e6cacac03"/>
+				<subreportParameter name="profesor_id">
+					<subreportParameterExpression><![CDATA[$P{profesor_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "AlumnosProfesor_subreport_Profesor.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="68312120-764d-4c08-99c6-95302c615bca"/>
+				<text><![CDATA[alumno_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" uuid="a255bd38-8620-4348-9a76-fbfba57b6ed2"/>
+				<text><![CDATA[alumno_edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" uuid="eb3d5d5c-f79b-4a30-bcd9-e85f56e74302"/>
+				<text><![CDATA[alumno_grado]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="30" width="182" height="1" uuid="1abb93ca-077e-48c3-b5ab-a1a2a509df1f"/>
+			</line>
+			<line>
+				<reportElement x="185" y="30" width="185" height="1" uuid="bc06f7ea-98ce-44ab-975c-5a08b24164a4"/>
+			</line>
+			<line>
+				<reportElement x="370" y="30" width="185" height="1" uuid="06531abe-cc5a-4d64-a5af-349ce140b07f"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="d31d828b-372a-4b7f-83ae-442b306604fb"/>
+				<textFieldExpression><![CDATA[$F{alumno_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="20" uuid="3ea51055-56ad-4f67-938e-29cc062d85ae"/>
+				<textFieldExpression><![CDATA[$F{alumno_edad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="20" uuid="af752cef-4b36-451b-8ab6-9ba519387aad"/>
+				<textFieldExpression><![CDATA[$F{alumno_grado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="e79c6b54-6e76-443b-ac44-eedf59ed1cc8"/>
+				<textFieldExpression><![CDATA[$V{alumno_nombre_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

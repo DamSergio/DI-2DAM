@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="prueba2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04f4900d-f4cd-43c3-a93c-d8fa7bf5d461">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="12"/>
+	<parameter name="DEPARTAMENTO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from ejemplo.participantes order by DEPARTAMENTO]]>
+	</queryString>
+	<field name="ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOMBRE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="USERNAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PASSWORD" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DEPARTAMENTO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COMENTARIOS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="DEPARTAMENTO_1" class="java.lang.Integer" resetType="Group" resetGroup="DEPARTAMENTO" calculation="Count">
+		<variableExpression><![CDATA[$F{DEPARTAMENTO}]]></variableExpression>
+	</variable>
+	<variable name="MEDIA_DEPARTAMENTO" class="java.lang.Number" incrementType="Group" incrementGroup="DEPARTAMENTO" calculation="Average">
+		<variableExpression><![CDATA[$V{DEPARTAMENTO_COUNT}]]></variableExpression>
+	</variable>
+	<variable name="ID_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+	</variable>
+	<variable name="ID_2" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+	</variable>
+	<group name="DEPARTAMENTO">
+		<groupExpression><![CDATA[$F{DEPARTAMENTO}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<textField>
+					<reportElement x="16" y="14" width="222" height="20" uuid="6919ffea-09ee-4831-9dbe-d61644e2e267"/>
+					<textFieldExpression><![CDATA["DEPARTAMENTO " + $F{DEPARTAMENTO}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="28">
+				<textField>
+					<reportElement x="0" y="0" width="555" height="20" uuid="8d747069-e40d-4eb2-923b-8cd38003ba92"/>
+					<textFieldExpression><![CDATA["NUMERO DE PERSONAS EN EL DEPARTAMENTO: " + $V{DEPARTAMENTO_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="299" y="29" width="100" height="20" uuid="663cf015-55bf-4307-9488-db8faad4ad78"/>
+				<textFieldExpression><![CDATA[$P{DEPARTAMENTO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="112" y="29" width="287" height="20" uuid="f8a5b65c-886a-45b1-949c-3d9b8613c98d"/>
+				<text><![CDATA[MIENBROS DEL DEPARTAMENTO: ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="20" uuid="c50951f2-b1e1-4600-8e2a-22bab3090684"/>
+				<text><![CDATA[USERNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="138" height="20" uuid="efd2156c-5182-43f5-80f3-3f304798243a"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="138" height="20" uuid="ee024343-9377-470a-8167-856e69858185"/>
+				<text><![CDATA[DEPARTAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="138" height="20" uuid="fe229e05-5ff2-48a8-acb2-8cd4da0a9809"/>
+				<text><![CDATA[COMENTARIOS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="beeda17d-8f52-4c96-ace9-23e6de6a36f3"/>
+				<textFieldExpression><![CDATA[$F{USERNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="138" height="20" uuid="8124f3ad-342f-41ac-a3f9-9766481af77d"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="138" height="20" uuid="823b7596-bf04-4b98-9762-474d7e602578"/>
+				<textFieldExpression><![CDATA[$F{DEPARTAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="20" uuid="a41e8c63-997b-4671-891e-fa53d9fb7b3d"/>
+				<textFieldExpression><![CDATA[$F{COMENTARIOS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="199" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="0" y="44" width="552" height="155" uuid="d807bc27-44a7-4226-ae63-cfd510dde89f"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["PERSONAS POR DEPARTAMENTO"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{DEPARTAMENTO}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{DEPARTAMENTO_COUNT}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<textField>
+				<reportElement x="138" y="0" width="112" height="20" uuid="4bb2403d-acba-48ed-b046-e644b3762773"/>
+				<textFieldExpression><![CDATA[$V{ID_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="20" uuid="6ccc255b-1100-4a72-b62b-7b431798a0d8"/>
+				<text><![CDATA[TOTAL DE PERSONAS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="0" width="100" height="20" uuid="34d12b70-c60e-47de-aa45-0400fa449c50"/>
+				<textFieldExpression><![CDATA[$V{MEDIA_DEPARTAMENTO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="358" y="0" width="197" height="20" uuid="ba9e117b-f2f9-4634-b45c-953596052300"/>
+				<text><![CDATA[MEDIA POR DEP]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
