@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<installation version="5.0">
+
+   <info>
+      <appname>Prueba izpack</appname>
+      <appversion>1.0</appversion>
+      <url>https://www.youtube.com/watch?v=dQw4w9WgXcQ</url>
+      <authors>
+         <author name="manuel" email="prueba@gmail.com"/>
+      </authors>		
+   </info>
+
+   <guiprefs resizable="yes" width="800" height="600"/>
+
+   <locale>
+      <langpack iso3="spa"/>
+   </locale>
+
+   <panels>
+      <panel classname="HelloPanel"/>
+      <panel classname="PacksPanel"/>
+      <panel classname="TargetPanel"/>
+      <panel classname="InstallPanel"/>
+      <panel classname="FinishPanel"/>
+   </panels>
+
+    <packs>
+
+      <pack name="ejecutables" required="yes">
+         <description>El ejecutable y sus ficheros</description>
+         <file src="C:\Users\Sergio\Desktop\DI-2DAM\izPack\bin" targetdir="$INSTALL_PATH"/>
+      </pack>
+
+   </packs>
+   </installation>

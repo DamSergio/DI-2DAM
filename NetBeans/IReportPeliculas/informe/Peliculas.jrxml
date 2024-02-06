@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Peliculas" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ef0db30f-e484-47cf-8017-b3fc77ae5946">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="genero" class="java.lang.String"/>
+	<field name="visto" class="java.lang.Boolean"/>
+	<field name="cine" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="198" y="0" width="138" height="43" uuid="ac43dd5a-cae7-48b1-be94-9ade4e13990b"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Peliculas]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="53" width="552" height="1" uuid="b82f71ca-1ec3-40a4-8f8b-07b04b3a74d2"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="3ddbaba9-195f-4f06-b5e6-161122b3646b"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="138" height="20" uuid="f7f2fe49-b6f9-44df-87da-97042fc4b20f"/>
+				<textFieldExpression><![CDATA[$F{genero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="138" height="20" uuid="f11d7ae2-40a3-4eb6-ab03-aa4fa087835b"/>
+				<textFieldExpression><![CDATA[$F{visto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="20" uuid="93f31c7e-f4fb-4d48-bae4-a8aece86fd73"/>
+				<textFieldExpression><![CDATA[$F{cine}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

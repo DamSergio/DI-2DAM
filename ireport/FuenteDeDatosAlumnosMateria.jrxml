@@ -3,7 +3,7 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<field name="id" class="java.lang.Integer"/>
+	<field name="clave" class="java.lang.String"/>
 	<field name="nombre" class="java.lang.String"/>
 	<field name="materiasDS" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<background>
@@ -39,12 +39,12 @@
 				<subreportExpression><![CDATA["FuenteDeDatosAlumnosMateria_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement x="-26" y="-93" width="277" height="20" uuid="ff1e3c53-4984-4ff6-9072-a0c61edb3018"/>
-				<text><![CDATA[clave]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="278" y="0" width="277" height="20" uuid="65da682e-fc6d-4b1d-afc0-00b027e7c22d"/>
 				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="277" height="20" uuid="d02122d9-1468-4029-92dc-829f4e478964"/>
+				<text><![CDATA[clave]]></text>
 			</staticText>
 		</band>
 	</detail>

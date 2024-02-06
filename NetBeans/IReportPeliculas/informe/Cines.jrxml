@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cines" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="347914b9-045f-4f01-aff3-b1327b08df9e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="dir" class="java.lang.String"/>
+	<field name="peliculasDS" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="246" y="12" width="127" height="47" uuid="e4aee601-b722-46c7-8320-a7b9639b4003"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CINES]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="59" width="555" height="1" uuid="847ca532-6590-484f-865f-87aa7a475f20"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="159" splitType="Stretch">
+			<textField>
+				<reportElement x="116" y="39" width="161" height="20" uuid="8a6878d1-4ec5-48bf-9f75-05ec35c7c440"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="389" y="39" width="166" height="20" uuid="29b13937-f975-465f-9795-2b502c092bfd"/>
+				<textFieldExpression><![CDATA[$F{dir}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="277" y="39" width="277" height="20" uuid="cd3e8e94-5e0c-4770-8e80-672dfe9293c4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[dir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="39" width="277" height="20" uuid="91118d82-dcd7-460d-9240-3d602853d26e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="0" y="59" width="554" height="100" uuid="4f1c599d-5ff4-4978-9d3d-564984a93337"/>
+				<dataSourceExpression><![CDATA[$F{peliculasDS}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["C:\\Users\\Sergio\\Desktop\\DI-2DAM\\ireport\\Peliculas.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="0" y="15" width="554" height="1" uuid="f0f495c6-4161-4fac-8ddf-1a4199af8477"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

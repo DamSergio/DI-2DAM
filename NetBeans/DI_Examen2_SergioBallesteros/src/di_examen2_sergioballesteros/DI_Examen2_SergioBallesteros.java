@@ -9,9 +9,15 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.help.HelpBroker;
+import javax.help.HelpSet;
+import javax.help.HelpSetException;
 import javax.swing.JOptionPane;
 import javax.swing.SwingWorker;
 import javax.swing.plaf.basic.BasicComboBoxUI;
@@ -47,6 +53,24 @@ public class DI_Examen2_SergioBallesteros extends javax.swing.JFrame {
         pbPrimos.setForeground(Color.BLACK);
         
         btnGuess.setEnabled(false);
+        cargarAyuda();
+    }
+    
+    public void cargarAyuda() {
+        try {
+            File fichero = new File("help/help_set.hs");
+            URL hsURL = fichero.toURI().toURL();
+            
+            HelpSet helpSet = new HelpSet(getClass().getClassLoader(), hsURL);
+            HelpBroker hb = helpSet.createHelpBroker();
+            
+            hb.enableHelpKey(getRootPane(), "ventana_principal", helpSet);
+            hb.enableHelpOnButton(btnHelp, "ventana_principal", helpSet);
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(DI_Examen2_SergioBallesteros.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (HelpSetException ex) {
+            Logger.getLogger(DI_Examen2_SergioBallesteros.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public void initTable(){
@@ -74,6 +98,9 @@ public class DI_Examen2_SergioBallesteros extends javax.swing.JFrame {
         tbSumas = new javax.swing.JTable();
         txtGuess = new di_examen2_sergioballesteros.TextFieldPersonalizado();
         labelPersonalizado1 = new di_examen2_sergioballesteros.LabelPersonalizado();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        btnHelp = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,6 +139,20 @@ public class DI_Examen2_SergioBallesteros extends javax.swing.JFrame {
         labelPersonalizado1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelPersonalizado1.setText("HAZME CLICK");
 
+        jMenu1.setText("Ayuda");
+
+        btnHelp.setText("Ver ayuda");
+        btnHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHelpActionPerformed(evt);
+            }
+        });
+        jMenu1.add(btnHelp);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -142,7 +183,7 @@ public class DI_Examen2_SergioBallesteros extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnPrimos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pbPrimos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -160,8 +201,8 @@ public class DI_Examen2_SergioBallesteros extends javax.swing.JFrame {
                         .addComponent(btnGuess)
                         .addGap(18, 18, 18)
                         .addComponent(txtGuess, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE))
-                .addGap(60, 60, 60)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelPersonalizado1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -237,6 +278,10 @@ public class DI_Examen2_SergioBallesteros extends javax.swing.JFrame {
         bd.execute();
     }//GEN-LAST:event_btnGuessActionPerformed
 
+    private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHelpActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -274,7 +319,10 @@ public class DI_Examen2_SergioBallesteros extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuess;
+    private javax.swing.JMenuItem btnHelp;
     private javax.swing.JButton btnPrimos;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private di_examen2_sergioballesteros.LabelPersonalizado labelPersonalizado1;
     private javax.swing.JLabel lbSuma;
